@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="user-scalable=no">
+
+    <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflQN4-w6/www-widgetapi.js" async=""></script>
+
+    <script>
+        var TogetherJSConfig_autoStart = true;
+        var TogetherJSConfig_suppressJoinConfirmation = true;
+        var TogetherJSConfig_dontShowClicks = ":not(canvas"
+    </script>
+
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/draw.css"/>
+
+
+    <title>Let's Draw</title>
+</head>
+<body>
+<div class="container">
+    <section class="body-content row" id="sketchapp" style="margin-left: 0">
+<h3 align="center">Let's Draw</h3>
+<a class="pull-right tjsbutton" onclick="TogetherJS(this); return false;">
+    <img src="https://togetherjs.com/images/start-togetherjs-blue.png" style="width: 125px" />
+</a>
+<br><br>
+<div class="btn-group btn-group-justified" style="margin-right: auto; margin-left: auto">
+    <a class="btn btn-info color-picker upper-button">Blue</a>
+    <a class="btn btn-success color-picker">Green</a>
+    <a class="btn btn-warning color-picker">Yellow</a>
+    <a class="btn btn-danger color-picker">Red</a>
+    <a class="btn btn-success color-picker black-pick upper-button" style="border-bottom-width: 0px;">Black</a>
+</div>
+<div class="clearfix"></div>
+<div id="sketchContainer" style="width: 100%; border: 1px solid rgba(0,0,0,0.2)">
+    <canvas id="sketch" style="cursor: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAcklEQVQoU43QYQ3CMBAG0DcHSJgDQMHmAAtIACWbhM3JLEwBSEACuaRNmg2W9vfr991do/I1lc4WtrjhhBnvHFTCQK+i4YNrxiV8YMCKQB2eGOPzL7ik6ss/GHMFOqf6SO5T+m6ZwPcEp4y21YeXqr7jF2T0EQsgsaPSAAAAAElFTkSuQmCC&quot;) 5 5, crosshair;"></canvas>
+</div>
+    <script type="text/javascript" src="/javascripts/draw.js"></script>
+<div class="btn-group btn-group-justified" style="margin-right: auto; width: 100%;">
+    <a class="btn btn-info user-color-pick bottom-button" style="width: 30%;">User Color</a>
+    <a class="btn btn-success plus-size" style="width: 15%;">
+        <i class="fa fa-plus-square"></i>
+    </a>
+    <a class="btn btn-warning clear" style="width: 15%;">
+        <i class="fa fa-times-circle"></i>
+    </a>
+    <a class="btn btn-danger minus-size" style="width: 15%;">
+        <i class="fa fa-minus-square"></i>
+    </a>
+    <a class="btn btn-default eraser bottom-button" style="width: 35%; border-top-width: 0px;">
+        <i class="fa fa-eraser"></i>
+    </a>
+</div>
+    </section>
+</div>
+</body>
+</html>
