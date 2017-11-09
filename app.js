@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var https = require('https');
+var http = require('http');
 var fs = require('fs');
 
 var index = require('./routes/index');
@@ -14,11 +14,7 @@ var app = express();
 var router = express.Router();
 app.use(router);
 
-var privateKey  = fs.readFileSync('ssl/ssl-cert-snakeoil.key', 'utf8');
-var certificate = fs.readFileSync('ssl/ssl-cert-snakeoil.pem', 'utf8');
-
-var credentials = {key: privateKey, cert: certificate};
-var httpsServer = https.createServer(credentials, app);
+var httpServer = http.createServer(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -53,7 +49,7 @@ app.use(function(err, req, res, next) {
     return res.render('error');
 });
 
-httpsServer.listen(8083);
+httpServer.listen(8083);
 console.log("Server is running");
 
 module.exports = app;
