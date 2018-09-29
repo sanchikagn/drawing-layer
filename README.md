@@ -1,4 +1,4 @@
-# Drawing-Layer
+# drawing-layer
 
 A basic layer of a whiteboard for enabling real-time collaboration. 
 This includes a basic Node.js server to serve the layer, and this drawing layer is based on TogetherJS for allowing real-time interaction among peers.
